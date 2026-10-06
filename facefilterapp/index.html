@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Face Filters</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- MediaPipe dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Magic Filters ✨</h1>
+            <p>Try filters and do things like opening your mouth, raising eyebrows, or tilting your head!</p>
+        </header>
+
+        <div class="main-content">
+            <div class="video-container">
+                <video id="videoElement" autoplay playsinline style="display: none;"></video>
+                <canvas id="canvasElement"></canvas>
+                <div id="loadingMessage" class="loading">Loading AI Models...</div>
+                <div id="surpriseEffect" class="surprise-hidden">🚀 HYPERDRIVE ACTIVATED! 🚀</div>
+            </div>
+
+            <div class="controls">
+                <h2>Choose Filter</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="none">Normal</button>
+                    <button class="filter-btn" data-filter="clown">🤡 Clown</button>
+                    <button class="filter-btn" data-filter="neon">🌟 Neon Mask</button>
+                    <button class="filter-btn" data-filter="alien">👽 Alien</button>
+                    <button class="filter-btn" data-filter="party">🎉 Party Glasses</button>
+                    <button class="filter-btn" data-filter="cyberpunk">🤖 Cyberpunk</button>
+                    <button class="filter-btn" data-filter="cat">🐱 Cat</button>
+                    <button class="filter-btn" data-filter="bandit">🦹 Bandit</button>
+                    <button class="filter-btn" data-filter="robot">🦾 Robot</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
